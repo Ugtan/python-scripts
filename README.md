@@ -4,3 +4,4 @@
 |  Script Name        |          Description           |
 |  ----------------------  | -----------------------------  |
 |*Xkcd* **Downloader**  | A Python script to download xkcd comics directly from its website |
+|**key Logger**  | A Python script to get the keyboard strokes entered |
