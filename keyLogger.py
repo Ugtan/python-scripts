@@ -1,24 +1,29 @@
 import os
-from pynput.keyboard import Key, Listener
+import string
+from pynput import keyboard
 
 if not os.path.exists('/home/umang/python-scripts/test.txt'):
     os.mknod('/home/umang/python-scripts/test.txt')
 
 file = open("test.txt", "w")
-combination = {Key.alt and Key.tab}
+current = []
 
 
 def on_press(key):
-    if key in combination:
-        print("Writing to file... ")
-    file.write(str(key))
 
+    current.append(str(key))
+    print(current)
 
-def on_release(key):
-    if key == Key.esc:
-        file.close()
+    if key == keyboard.Key.esc:
+        try:
+            stri = ''.join(current)
+        except AttributeError:
+            stri = string.join(current, '')
+
+        file.write(stri)
         listener.stop()
+        file.close()
 
 
-with Listener(on_press=on_press, on_release=on_release) as listener:
+with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
