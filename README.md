@@ -5,3 +5,4 @@
 |  ----------------------  | -----------------------------  |
 |*Xkcd* **Downloader**  | A Python script to download xkcd comics directly from its website |
 |**key Logger**  | A Python script to get the keyboard strokes entered |
+|**Github Contributions**  | A Python script to get the contributions, repos and starred repos of a user |
