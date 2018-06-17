@@ -1,4 +1,4 @@
-""" A small python script to scrap all the quotes from https://quotestoscrap.com and print them all"""
+""" A small python script to scrap all the quotes from http://quotes.toscrape.com and print them all"""
 
 import requests
 from bs4 import BeautifulSoup
