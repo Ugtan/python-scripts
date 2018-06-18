@@ -1,3 +1,9 @@
+'''
+  Dependencies : 1. requests
+                 2. beautifulsoup4
+                 3. tabulate
+                 4. colorclass
+'''
 import requests
 from bs4 import BeautifulSoup
 from tabulate import tabulate
