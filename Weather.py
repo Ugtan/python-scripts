@@ -1,4 +1,4 @@
-""" It is a small python script to check the weather of your current location using user's ip address and OpenWeatherMap API"""
+""" It is a small python script to check the weather of your current location(or any other city) using user's ip address and OpenWeatherMap API"""
 
 """ IMPORTANT:
 * To run this script you will first have to sign up on https://home.openweathermap.org/users/sign_up
