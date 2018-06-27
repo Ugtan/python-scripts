@@ -1,4 +1,11 @@
 """ A Python Script to display all the Upcoming Cubing Competitions, Competitions around you and Competitions based on the city entered """
+"""
+DEPENDENCIES: 1. requests
+              2. beautifulsoup4
+              3. tabulate
+              4. termcolor
+"""
+
 
 import requests
 from bs4 import BeautifulSoup
