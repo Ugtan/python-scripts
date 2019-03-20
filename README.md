@@ -3,6 +3,7 @@ Here are some of the python scripts i have written to keep myself busy, Just hav
 
 |  Script Name        |          Description           |
 |  ----------------------  | -----------------------------  |
+|**ChangeMyWallpaper** | A Python script to download a wallpaper and set it as the Desktop wallpaper of KDE plasma. | 
 |**CricRatings** | A Python script to find the team and player ratings for both men and women. |
 |**CubiCom** | A Python script to display the Upcoming Cubing Competitions as well as that are near you or based on the city entered. |
 |**Github Contributions** | A Python script to get Github contributions, repos and starred repos of a user. |
